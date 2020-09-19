@@ -1,0 +1,56 @@
+{
+  "name": "up-bank-typescript",
+  "version": "0.0.1",
+  "description": "Typescript wrapper for Up Bank API",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/examples.js",
+    "format:prettier": "prettier --check \"src/**/*.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/billyjs/up-bank-typescript.git"
+  },
+  "keywords": [
+    "up",
+    "upbank",
+    "fintech",
+    "banking",
+    "typescript"
+  ],
+  "author": "Billy Schulze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billyjs/up-bank-typescript/issues"
+  },
+  "homepage": "https://github.com/billyjs/up-bank-typescript#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 100
+  }
+}
