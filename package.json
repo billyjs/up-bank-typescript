@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "Typescript wrapper for Up Bank API",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.bundle.js",
   "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn clean && rollup -c",
     "start": "tsc && node dist/examples.js",
     "format:prettier": "prettier --check \"src/**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +37,10 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.27.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-typescript2": "^0.27.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.0.2"
